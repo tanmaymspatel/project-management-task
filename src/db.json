@@ -1,0 +1,190 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "emailId": "mehul.patel@gmail.com",
+      "name": "Mehul Patel",
+      "profileImage": "https://www.svgrepo.com/show/65453/avatar.svg",
+      "role": "employee",
+      "password": "mehul@123"
+    },
+    {
+      "id": 2,
+      "emailId": "yash.patel@gmail.com",
+      "name": "Yash Patel",
+      "profileImage": "https://www.svgrepo.com/show/65453/avatar.svg",
+      "role": "employee",
+      "password": "yash@123"
+    },
+    {
+      "id": 3,
+      "emailId": "tanmay.patel@gmail.com",
+      "name": "Tanmay Patel",
+      "profileImage": "https://www.svgrepo.com/show/65453/avatar.svg",
+      "role": "admin",
+      "password": "tanmay@123"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "userId": 1,
+      "projectName": "Project 1",
+      "clientName": "Client 1",
+      "description": "Project 1 description",
+      "reportingManager": "xyz",
+      "status": "Active",
+      "projectType": "Client"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "projectName": "Project 2",
+      "clientName": "Client 2",
+      "description": "Project 2 description",
+      "reportingManager": "abc",
+      "status": "New",
+      "projectType": "Client"
+    },
+    {
+      "id": 3,
+      "userId": 3,
+      "projectName": "Project 3",
+      "clientName": "Client 3",
+      "description": "Project 3 description",
+      "reportingManager": "xyz",
+      "status": "Completed",
+      "projectType": "Client"
+    },
+    {
+      "id": 4,
+      "userId": 2,
+      "projectName": "Project 4",
+      "clientName": "Client 4",
+      "description": "Project 4 description",
+      "reportingManager": "def",
+      "status": "Active",
+      "projectType": "Client"
+    },
+    {
+      "id": 5,
+      "userId": 2,
+      "projectName": "Project 5",
+      "clientName": "Client 5",
+      "description": "Project 5 description",
+      "reportingManager": "ghi",
+      "status": "New",
+      "projectType": "Client"
+    },
+    {
+      "id": 6,
+      "userId": 1,
+      "projectName": "Project 6",
+      "clientName": "Client 6",
+      "description": "Project 6 description",
+      "reportingManager": "abc",
+      "status": "Completed",
+      "projectType": "Client"
+    },
+    {
+      "id": 7,
+      "userId": 2,
+      "projectName": "Project 7",
+      "clientName": "Client 7",
+      "description": "Project 7 description",
+      "reportingManager": "def",
+      "status": "Active",
+      "projectType": "Client"
+    },
+    {
+      "id": 8,
+      "userId": 3,
+      "projectName": "Project 8",
+      "clientName": "Client 8",
+      "description": "Project 8 description",
+      "reportingManager": "xyz",
+      "status": "New",
+      "projectType": "Client"
+    },
+    {
+      "id": 9,
+      "userId": 2,
+      "projectName": "Project 9",
+      "clientName": "Client 9",
+      "description": "Project 9 description",
+      "reportingManager": "ghi",
+      "status": "Completed",
+      "projectType": "Client"
+    },
+    {
+      "id": 10,
+      "userId": 1,
+      "projectName": "Project 10",
+      "clientName": "Client 10",
+      "description": "Project 10 description",
+      "reportingManager": "abc",
+      "status": "Active",
+      "projectType": "Client"
+    },
+    {
+      "id": "f58d",
+      "userId": 3,
+      "projectName": "Project 11",
+      "clientName": "TechFanatic",
+      "projectType": "In House",
+      "description": "This project is in house project, which is very valuable for the company.",
+      "reportingManager": "Tanmay Patel",
+      "status": "New"
+    },
+    {
+      "id": "0e43",
+      "userId": 3,
+      "projectName": "Test Project",
+      "clientName": "Test Client",
+      "projectType": "In House",
+      "description": "Test Description ",
+      "reportingManager": "Mehul Patel",
+      "status": "New"
+    },
+    {
+      "id": "5c0b",
+      "userId": 3,
+      "projectName": "Project 123",
+      "clientName": "Client 123",
+      "projectType": "Client",
+      "description": "Test Project for Hiren.",
+      "reportingManager": "Hiren Tandel",
+      "status": "Active"
+    },
+    {
+      "id": "4fe1",
+      "userId": 3,
+      "projectName": "Facebook",
+      "clientName": "Meta",
+      "projectType": "Client",
+      "description": "Test for Facebook",
+      "reportingManager": "Viral Patel",
+      "status": "Completed"
+    },
+    {
+      "id": "00c8",
+      "userId": 3,
+      "projectName": "TechnoThink",
+      "clientName": "Tech Company",
+      "projectType": "Client",
+      "description": "Testing the Techno Think.",
+      "reportingManager": "Viral Patel",
+      "status": "Completed"
+    },
+    {
+      "id": "d48c",
+      "userId": 3,
+      "projectName": "₹ 232.00",
+      "clientName": "12",
+      "projectType": "Client",
+      "description": "uhuuhuih",
+      "reportingManager": "Select your favorite framework/library",
+      "status": "New"
+    }
+  ]
+}
