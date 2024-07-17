@@ -19,7 +19,7 @@ const AppRouting = () => {
         <Route path={MenuLinks.DASHBOARD} element={<Dashboard />} />
         <Route path={MenuLinks.PROJECTS} element={<Projects />} />
         <Route
-          path={`${MenuLinks.PROJECTS}/${MenuLinks.PROJECT_ID}/${MenuLinks.TASKS}`}
+          path={`${MenuLinks.PROJECT_ID}/${MenuLinks.TASKS}`}
           element={<Tasks />}
         />
       </Route>

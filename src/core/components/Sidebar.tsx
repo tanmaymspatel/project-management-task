@@ -12,7 +12,7 @@ import {
   IconLayoutDashboardFilled,
   IconLogout,
 } from "@tabler/icons-react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../../../project-management.svg";
 import {
   HEADER_HEIGHT,
@@ -40,23 +40,21 @@ const Sidebar = () => {
       withBorder
       className={classes.sidebar}
     >
-      <Link to={"/"}>
-        <Group
-          w={NAVBAR_WIDTH}
-          h={HEADER_HEIGHT}
-          style={{ borderBottom: "1px solid #e9ecef" }}
-          p={"sm"}
-        >
-          <Image
-            height={25}
-            width={"auto"}
-            fit="contain"
-            alt={"Logo"}
-            src={logo}
-          />
-          <Text fw={"bold"}>Project Management</Text>
-        </Group>
-      </Link>
+      <Group
+        w={NAVBAR_WIDTH}
+        h={HEADER_HEIGHT}
+        style={{ borderBottom: "1px solid #e9ecef" }}
+        p={"sm"}
+      >
+        <Image
+          height={25}
+          width={"auto"}
+          fit="contain"
+          alt={"Logo"}
+          src={logo}
+        />
+        <Text fw={"bold"}>Project Management</Text>
+      </Group>
       <Navbar.Section grow style={{ overflow: "auto" }} p={"sm"}>
         <Stack my={"sm"} spacing={0}>
           {/* Navigation menu */}
