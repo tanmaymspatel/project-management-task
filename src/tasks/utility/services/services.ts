@@ -1,17 +1,10 @@
 import { QueryTags } from "../../../core/utility/constants/constants";
 import { commonServices } from "../../../core/utility/services/service";
-import { ITask } from "../models/models";
+import { ITask } from "../../../shared/utility/models/models";
 
 export const taskServices = commonServices.injectEndpoints({
   endpoints: (builder) => ({
-    getTasksByUserId: builder.query<ITask[], { userId: string }>({
-      query: ({ userId }) => ({
-        method: "GET",
-        url: `tasks?userId=${userId ?? ""}`,
-      }),
-      providesTags: [QueryTags.TASK_LIST],
-    }),
-    // Add Project
+    // Add Task
     addTask: builder.mutation<ITask, { body: ITask }>({
       query: ({ body }) => ({
         method: "POST",
@@ -24,7 +17,7 @@ export const taskServices = commonServices.injectEndpoints({
         } else return [""];
       },
     }),
-    // Edit Project
+    // Edit Task
     editTask: builder.mutation<ITask, { body: ITask }>({
       query: ({ body }) => ({
         method: "PUT",
@@ -37,7 +30,7 @@ export const taskServices = commonServices.injectEndpoints({
         } else return [""];
       },
     }),
-    // Delete Project
+    // Delete Task
     deleteTask: builder.mutation<ITask, { id: string }>({
       query: ({ id }) => ({
         method: "DELETE",
@@ -53,7 +46,6 @@ export const taskServices = commonServices.injectEndpoints({
 });
 
 export const {
-  useGetTasksByUserIdQuery,
   useAddTaskMutation,
   useEditTaskMutation,
   useDeleteTaskMutation,

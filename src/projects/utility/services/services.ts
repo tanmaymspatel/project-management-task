@@ -1,17 +1,9 @@
 import { QueryTags } from "../../../core/utility/constants/constants";
 import { commonServices } from "../../../core/utility/services/service";
-import { IProject, IProjectFormValues } from "../models/model";
+import { IProjectFormValues } from "../models/model";
 
 export const projectServices = commonServices.injectEndpoints({
   endpoints: (builder) => ({
-    //
-    getProjectsByUserId: builder.query<IProject[], { userId: string }>({
-      query: ({ userId }) => ({
-        method: "GET",
-        url: `projects?userId=${userId ?? ""}`,
-      }),
-      providesTags: [QueryTags.PROJECT_LIST],
-    }),
     // Add Project
     addProjectsByUserId: builder.mutation<
       IProjectFormValues,
@@ -63,7 +55,6 @@ export const projectServices = commonServices.injectEndpoints({
 });
 
 export const {
-  useGetProjectsByUserIdQuery,
   useAddProjectsByUserIdMutation,
   useEditProjectsByUserIdMutation,
   useDeleteProjectsByUserIdMutation,

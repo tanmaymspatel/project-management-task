@@ -4,9 +4,7 @@ import { HEADER_HEIGHT } from "../utility/constants/constants";
 
 const Topbar = () => {
   const userName = localStorage.getItem("userName");
-  const isAdminRole = localStorage.getItem("isAuthenticated") === "true";
-
-  console.log(isAdminRole);
+  const isAdminRole = localStorage.getItem("isAdmin") === "true";
 
   return (
     <Header height={HEADER_HEIGHT} p={"sm"}>

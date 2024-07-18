@@ -40,7 +40,7 @@ const Login = () => {
     if (user) {
       navigate(`/users/${user.id}/dashboard`);
       localStorage.setItem("userName", user.name);
-      localStorage.setItem("userRole", JSON.stringify(user.role === "admin"));
+      localStorage.setItem("isAdmin", JSON.stringify(user.role === "admin"));
       localStorage.setItem("isAuthenticated", "true");
     } else {
       setError("invalid email or password");

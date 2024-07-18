@@ -3,6 +3,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import AppRouting from "./AppRouting";
 import { store } from "./core/utility/store/store";
+import AxiosInterceptor from "./core/components/AxiosInterceptor";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         }}
       >
         <BrowserRouter>
+          <AxiosInterceptor />
           <AppRouting />
         </BrowserRouter>
       </MantineProvider>

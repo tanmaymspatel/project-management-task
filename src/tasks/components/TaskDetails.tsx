@@ -6,7 +6,7 @@ import {
 } from "@tabler/icons-react";
 import UiDetailTile from "../../shared/components/UiDetailTile";
 import { getColorByStatus } from "../../shared/utility/helpers/helpers";
-import { ITask } from "../utility/models/models";
+import { ITask } from "../../shared/utility/models/models";
 
 interface ITaskDetailsProp {
   opened: boolean;

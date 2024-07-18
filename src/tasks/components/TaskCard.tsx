@@ -5,10 +5,10 @@ import { useState } from "react";
 import { getColorByStatus } from "../../shared/utility/helpers/helpers";
 import { commonStyles } from "../../shared/utility/styles/commonStyles";
 import Form from "../form/Form";
-import { ITask } from "../utility/models/models";
 import { useDeleteTaskMutation } from "../utility/services/services";
 import DeleteTaskModal from "./DeleteTaskModal";
 import TaskDetails from "./TaskDetails";
+import { ITask } from "../../shared/utility/models/models";
 
 const TaskCard = ({ task }: { task: ITask }) => {
   const [isEdit, setIsEdit] = useState(false);

@@ -10,12 +10,13 @@ import {
 import { useForm, yupResolver } from "@mantine/form";
 import { useParams } from "react-router-dom";
 import { projectStatuses, projectTypes } from "../utility/constants/constants";
-import { IProject, IProjectFormValues } from "../utility/models/model";
+import { IProjectFormValues } from "../utility/models/model";
 import projectFormValidationSchema from "../utility/validations/projectForm.validations";
 import {
   useAddProjectsByUserIdMutation,
   useEditProjectsByUserIdMutation,
 } from "../utility/services/services";
+import { IProject } from "../../shared/utility/models/models";
 
 interface IFormProps {
   opened: boolean;
@@ -32,7 +33,7 @@ const Form = ({ opened, onClose, title, editProjectDetails }: IFormProps) => {
     useEditProjectsByUserIdMutation();
   const form = useForm({
     initialValues: {
-      userId: Number(userId),
+      userId: userId,
       projectName: editProjectDetails ? editProjectDetails.projectName : "",
       clientName: editProjectDetails ? editProjectDetails.clientName : "",
       projectType: editProjectDetails ? editProjectDetails.projectType : "",
