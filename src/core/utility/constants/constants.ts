@@ -13,4 +13,5 @@ export const MenuLinks = {
 
 export const QueryTags = {
   PROJECT_LIST: "projectList",
+  TASK_LIST: "taskList",
 };

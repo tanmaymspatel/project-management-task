@@ -7,7 +7,7 @@ interface IProjectDetailTileProps {
   icon: ReactNode;
 }
 
-const ProjectDetailTile = ({ label, value, icon }: IProjectDetailTileProps) => {
+const UiDetailTile = ({ label, value, icon }: IProjectDetailTileProps) => {
   return (
     <Group noWrap>
       <ThemeIcon variant="light">{icon}</ThemeIcon>
@@ -21,4 +21,4 @@ const ProjectDetailTile = ({ label, value, icon }: IProjectDetailTileProps) => {
   );
 };
 
-export default ProjectDetailTile;
+export default UiDetailTile;

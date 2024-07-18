@@ -5,9 +5,6 @@ import UiHeader from "../shared/components/UiHeader";
 import UiWrapper from "../shared/components/UiWrapper";
 
 const Dashboard = () => {
-  const isAdminRole = localStorage.getItem("isAuthenticated") === "true";
-  console.log(isAdminRole);
-
   return (
     <UiWrapper>
       <UiHeader pageTitle={"Dashboard"}></UiHeader>

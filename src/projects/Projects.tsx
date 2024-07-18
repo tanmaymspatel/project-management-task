@@ -9,6 +9,7 @@ import ProjectCard from "./components/ProjectCard";
 import { useGetProjectsByUserIdQuery } from "./utility/services/services";
 
 const Projects = () => {
+  const isAdminRole = localStorage.getItem("isAuthenticated") === "true";
   const { userId = "" } = useParams();
   const { data: projects, isFetching } = useGetProjectsByUserIdQuery({
     userId: userId,
@@ -17,7 +18,7 @@ const Projects = () => {
   return (
     <UiWrapper>
       <UiHeader pageTitle={"Projects"}>
-        <NewProjectBtn />
+        {isAdminRole && <NewProjectBtn />}
       </UiHeader>
       <UiContainer>
         <Box>

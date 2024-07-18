@@ -1,13 +1,13 @@
 import { Badge, Drawer, Group, Stack, Title } from "@mantine/core";
 import { IProject } from "../utility/models/model";
-import { getColorByStatus } from "../utility/helpers/helpers";
-import ProjectDetailTile from "../components/ProjectDetailTile";
 import {
   IconAlignBoxCenterMiddle,
   IconFileDescription,
   IconUserBitcoin,
   IconUserCog,
 } from "@tabler/icons-react";
+import { getColorByStatus } from "../../shared/utility/helpers/helpers";
+import UiDetailTile from "../../shared/components/UiDetailTile";
 
 interface IProjectDetailsProp {
   opened: boolean;
@@ -40,22 +40,22 @@ const ProjectDetails = ({
       size="xl"
     >
       <Stack spacing={"sm"} py={"lg"}>
-        <ProjectDetailTile
+        <UiDetailTile
           icon={<IconUserBitcoin size={16} />}
           label="Client Name"
           value={projectDetails?.clientName}
         />
-        <ProjectDetailTile
+        <UiDetailTile
           icon={<IconAlignBoxCenterMiddle size={16} />}
           label="Project Type"
           value={projectDetails?.projectType}
         />
-        <ProjectDetailTile
+        <UiDetailTile
           icon={<IconUserCog size={16} />}
           label="Reporting Manager"
           value={projectDetails?.reportingManager}
         />
-        <ProjectDetailTile
+        <UiDetailTile
           icon={<IconFileDescription size={16} />}
           label="Description"
           value={projectDetails?.description}

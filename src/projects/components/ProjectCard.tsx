@@ -16,7 +16,6 @@ import {
   IconTemplate,
   IconTrash,
 } from "@tabler/icons-react";
-import { getColorByStatus } from "../utility/helpers/helpers";
 import { useState } from "react";
 import Form from "../form/Form";
 import DeleteProjectModal from "./DeleteProjectModal";
@@ -25,6 +24,7 @@ import ProjectDetails from "../detail/ProjectDetails";
 import { useHover } from "@mantine/hooks";
 import { commonStyles } from "../../shared/utility/styles/commonStyles";
 import { useNavigate } from "react-router-dom";
+import { getColorByStatus } from "../../shared/utility/helpers/helpers";
 
 const ProjectCard = ({ project }: { project: IProject }) => {
   const [isEdit, setIsEdit] = useState(false);
@@ -117,13 +117,13 @@ const ProjectCard = ({ project }: { project: IProject }) => {
           <Group position="apart">
             <Group>
               <Stack spacing={0}>
-                <Text fz={"xs"} c={"dimmed"}>
+                <Text fz={"xs"} c={"dimmed"} fw={"bold"}>
                   Project Type
                 </Text>
                 <Text fz={"sm"}>{project?.projectType}</Text>
               </Stack>
               <Stack spacing={0}>
-                <Text fz={"xs"} c={"dimmed"}>
+                <Text fz={"xs"} c={"dimmed"} fw={"bold"}>
                   Reporting Manager
                 </Text>
                 <Text fz={"sm"}>{project?.reportingManager}</Text>

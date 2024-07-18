@@ -8,5 +8,5 @@ export const commonServices = createApi({
   reducerPath: "commonServices",
   baseQuery: axiosBaseQuery(url),
   endpoints: () => ({}),
-  tagTypes: [QueryTags.PROJECT_LIST],
+  tagTypes: [QueryTags.PROJECT_LIST, QueryTags.TASK_LIST],
 });
