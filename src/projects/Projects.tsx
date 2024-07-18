@@ -6,7 +6,7 @@ import UiSkeleton from "../shared/components/UiSkeleton";
 import UiWrapper from "../shared/components/UiWrapper";
 import NewProjectBtn from "./components/NewProjectBtn";
 import ProjectCard from "./components/ProjectCard";
-import { useGetProjectsByUserIdQuery } from "./utility/services/services";
+import { useGetProjectsByUserIdQuery } from "../shared/utility/services/services";
 
 const Projects = () => {
   const isAdminRole = localStorage.getItem("isAuthenticated") === "true";

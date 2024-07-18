@@ -5,12 +5,13 @@ import { useState } from "react";
 import { getColorByStatus } from "../../shared/utility/helpers/helpers";
 import { commonStyles } from "../../shared/utility/styles/commonStyles";
 import Form from "../form/Form";
-import { ITask } from "../utility/models/models";
 import { useDeleteTaskMutation } from "../utility/services/services";
 import DeleteTaskModal from "./DeleteTaskModal";
 import TaskDetails from "./TaskDetails";
+import { ITask } from "../../shared/utility/models/models";
 
 const TaskCard = ({ task }: { task: ITask }) => {
+  const isAdminRole = localStorage.getItem("isAuthenticated") === "true";
   const [isEdit, setIsEdit] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
   const [isShowDetails, setIsShowDetails] = useState(false);
@@ -56,38 +57,40 @@ const TaskCard = ({ task }: { task: ITask }) => {
               </Text>
             </Stack>
             <Group>
-              <Menu
-                transition={"pop"}
-                loop
-                position={"left-start"}
-                withinPortal
-              >
-                <Menu.Target>
-                  <ActionIcon variant="subtle" size={20}>
-                    <IconDotsVertical />
-                  </ActionIcon>
-                </Menu.Target>
-                <Menu.Dropdown>
-                  <Menu.Item
-                    icon={<IconTemplate size={18} />}
-                    onClick={() => {
-                      setIsEdit(true);
-                    }}
-                  >
-                    Edit
-                  </Menu.Item>
+              {isAdminRole && (
+                <Menu
+                  transition={"pop"}
+                  loop
+                  position={"left-start"}
+                  withinPortal
+                >
+                  <Menu.Target>
+                    <ActionIcon variant="subtle" size={20}>
+                      <IconDotsVertical />
+                    </ActionIcon>
+                  </Menu.Target>
+                  <Menu.Dropdown>
+                    <Menu.Item
+                      icon={<IconTemplate size={18} />}
+                      onClick={() => {
+                        setIsEdit(true);
+                      }}
+                    >
+                      Edit
+                    </Menu.Item>
 
-                  <Menu.Item
-                    c={"red"}
-                    icon={<IconTrash size={18} />}
-                    onClick={() => {
-                      setIsDelete(true);
-                    }}
-                  >
-                    Delete
-                  </Menu.Item>
-                </Menu.Dropdown>
-              </Menu>
+                    <Menu.Item
+                      c={"red"}
+                      icon={<IconTrash size={18} />}
+                      onClick={() => {
+                        setIsDelete(true);
+                      }}
+                    >
+                      Delete
+                    </Menu.Item>
+                  </Menu.Dropdown>
+                </Menu>
+              )}
             </Group>
           </Group>
           <Group position="apart">

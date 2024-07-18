@@ -13,9 +13,9 @@ import UiSkeleton from "../shared/components/UiSkeleton";
 import UiWrapper from "../shared/components/UiWrapper";
 import NewTaskBtn from "./components/NewTaskBtn";
 import TaskCard from "./components/TaskCard";
-import { getFilteredTasks } from "./utility/helpers/helpers";
-import { ITask } from "./utility/models/models";
-import { useGetTasksByUserIdQuery } from "./utility/services/services";
+import { useGetTasksByUserIdQuery } from "../shared/utility/services/services";
+import { getFilteredList } from "../shared/utility/helpers/helpers";
+import { ITask } from "../shared/utility/models/models";
 
 const Tasks = () => {
   const theme = useMantineTheme();
@@ -27,17 +27,17 @@ const Tasks = () => {
   const projectTasks =
     tasks && tasks?.filter((task) => task.projectId === projectId);
 
-  const completedTasks = getFilteredTasks(
+  const completedTasks = getFilteredList(
     projectTasks as ITask[],
     "status",
     "completed"
   );
-  const activeTasks = getFilteredTasks(
+  const activeTasks = getFilteredList(
     projectTasks as ITask[],
     "status",
     "active"
   );
-  const newTasks = getFilteredTasks(projectTasks as ITask[], "status", "new");
+  const newTasks = getFilteredList(projectTasks as ITask[], "status", "new");
 
   return (
     <UiWrapper>

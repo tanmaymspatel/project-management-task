@@ -1,5 +1,4 @@
 import { Badge, Drawer, Group, Stack, Title } from "@mantine/core";
-import { IProject } from "../utility/models/model";
 import {
   IconAlignBoxCenterMiddle,
   IconFileDescription,
@@ -8,6 +7,7 @@ import {
 } from "@tabler/icons-react";
 import { getColorByStatus } from "../../shared/utility/helpers/helpers";
 import UiDetailTile from "../../shared/components/UiDetailTile";
+import { IProject } from "../../shared/utility/models/models";
 
 interface IProjectDetailsProp {
   opened: boolean;

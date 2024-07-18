@@ -6,8 +6,6 @@ const Topbar = () => {
   const userName = localStorage.getItem("userName");
   const isAdminRole = localStorage.getItem("isAuthenticated") === "true";
 
-  console.log(isAdminRole);
-
   return (
     <Header height={HEADER_HEIGHT} p={"sm"}>
       <Group position="right" spacing={8}>

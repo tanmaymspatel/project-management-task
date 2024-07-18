@@ -9,7 +9,7 @@ import {
   Text,
   ThemeIcon,
 } from "@mantine/core";
-import { IProject, IProjectFormValues } from "../utility/models/model";
+import { IProjectFormValues } from "../utility/models/model";
 import {
   IconDotsVertical,
   IconReportAnalytics,
@@ -25,8 +25,10 @@ import { useHover } from "@mantine/hooks";
 import { commonStyles } from "../../shared/utility/styles/commonStyles";
 import { useNavigate } from "react-router-dom";
 import { getColorByStatus } from "../../shared/utility/helpers/helpers";
+import { IProject } from "../../shared/utility/models/models";
 
 const ProjectCard = ({ project }: { project: IProject }) => {
+  const isAdminRole = localStorage.getItem("isAuthenticated") === "true";
   const [isEdit, setIsEdit] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
   const [isShowDetails, setIsShowDetails] = useState(false);
@@ -77,38 +79,40 @@ const ProjectCard = ({ project }: { project: IProject }) => {
               <Badge variant="filled" color={getColorByStatus(project?.status)}>
                 {project?.status}
               </Badge>
-              <Menu
-                transition={"pop"}
-                loop
-                position={"left-start"}
-                withinPortal
-              >
-                <Menu.Target>
-                  <ActionIcon variant="subtle" size={20}>
-                    <IconDotsVertical />
-                  </ActionIcon>
-                </Menu.Target>
-                <Menu.Dropdown>
-                  <Menu.Item
-                    icon={<IconTemplate size={18} />}
-                    onClick={() => {
-                      setIsEdit(true);
-                    }}
-                  >
-                    Edit Project
-                  </Menu.Item>
+              {isAdminRole && (
+                <Menu
+                  transition={"pop"}
+                  loop
+                  position={"left-start"}
+                  withinPortal
+                >
+                  <Menu.Target>
+                    <ActionIcon variant="subtle" size={20}>
+                      <IconDotsVertical />
+                    </ActionIcon>
+                  </Menu.Target>
+                  <Menu.Dropdown>
+                    <Menu.Item
+                      icon={<IconTemplate size={18} />}
+                      onClick={() => {
+                        setIsEdit(true);
+                      }}
+                    >
+                      Edit Project
+                    </Menu.Item>
 
-                  <Menu.Item
-                    c={"red"}
-                    icon={<IconTrash size={18} />}
-                    onClick={() => {
-                      setIsDelete(true);
-                    }}
-                  >
-                    Delete
-                  </Menu.Item>
-                </Menu.Dropdown>
-              </Menu>
+                    <Menu.Item
+                      c={"red"}
+                      icon={<IconTrash size={18} />}
+                      onClick={() => {
+                        setIsDelete(true);
+                      }}
+                    >
+                      Delete
+                    </Menu.Item>
+                  </Menu.Dropdown>
+                </Menu>
+              )}
             </Group>
           </Group>
           <Text fz={"sm"} lineClamp={2} title={project?.description}>

@@ -9,7 +9,6 @@ import {
 } from "@mantine/core";
 import { useForm, yupResolver } from "@mantine/form";
 import { useParams } from "react-router-dom";
-import { ITask } from "../utility/models/models";
 import { taskFormValidationSchema } from "../utility/validations/taskFoamValidations";
 import {
   useAddTaskMutation,
@@ -20,6 +19,7 @@ import {
   categories,
   status,
 } from "../utility/constants/constants";
+import { ITask } from "../../shared/utility/models/models";
 
 interface IFormProps {
   opened: boolean;
