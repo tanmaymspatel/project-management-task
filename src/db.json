@@ -189,7 +189,7 @@
       "status": "active"
     },
     {
-      "userId": "2",
+      "userId": "1",
       "projectId": "2",
       "id": "2",
       "name": "Task 2",
@@ -199,7 +199,7 @@
       "status": "new"
     },
     {
-      "userId": "3",
+      "userId": "1",
       "projectId": "3",
       "id": "3",
       "name": "Task 3",
@@ -276,7 +276,7 @@
       "category": "bug-fix",
       "description": "Task description 10",
       "billingType": "non-billable",
-      "status": "active"
+      "status": "new"
     },
     {
       "userId": "2",
@@ -366,7 +366,7 @@
       "category": "code-review",
       "description": "Task description 19",
       "billingType": "billable",
-      "status": "active"
+      "status": "completed"
     },
     {
       "userId": "2",
@@ -406,7 +406,7 @@
       "category": "analysis",
       "description": "Task description 23",
       "billingType": "billable",
-      "status": "new"
+      "status": "active"
     },
     {
       "userId": "3",
@@ -436,7 +436,7 @@
       "category": "development",
       "description": "Task description 26",
       "billingType": "non-billable",
-      "status": "new"
+      "status": "completed"
     },
     {
       "userId": "3",
@@ -496,7 +496,7 @@
       "category": "documentation",
       "description": "Task description 32",
       "billingType": "non-billable",
-      "status": "new"
+      "status": "active"
     },
     {
       "userId": "3",
@@ -526,7 +526,7 @@
       "category": "bug-fix",
       "description": "Task description 35",
       "billingType": "billable",
-      "status": "new"
+      "status": "completed"
     },
     {
       "userId": "3",

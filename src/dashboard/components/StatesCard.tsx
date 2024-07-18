@@ -19,7 +19,10 @@ const StatesCard = ({
   return (
     <Card radius={"md"} withBorder h={"100%"}>
       <Card.Section withBorder p={"sm"}>
-        <Title order={5}>{cardTitle}</Title>
+        <Group spacing={4}>
+          <Title order={5}>{cardTitle}</Title>
+          <Title order={5} c={"dimmed"}>{`(${total})`}</Title>
+        </Group>
       </Card.Section>
       <Stack py={"sm"}>
         <Group position="apart">

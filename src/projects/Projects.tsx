@@ -9,7 +9,7 @@ import ProjectCard from "./components/ProjectCard";
 import { useGetProjectsByUserIdQuery } from "../shared/utility/services/services";
 
 const Projects = () => {
-  const isAdminRole = localStorage.getItem("isAuthenticated") === "true";
+  const isAdminRole = localStorage.getItem("isAdmin") === "true";
   const { userId = "" } = useParams();
   const { data: projects, isFetching } = useGetProjectsByUserIdQuery({
     userId: userId,

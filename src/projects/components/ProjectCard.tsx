@@ -28,7 +28,7 @@ import { getColorByStatus } from "../../shared/utility/helpers/helpers";
 import { IProject } from "../../shared/utility/models/models";
 
 const ProjectCard = ({ project }: { project: IProject }) => {
-  const isAdminRole = localStorage.getItem("isAuthenticated") === "true";
+  const isAdminRole = localStorage.getItem("isAdmin") === "true";
   const [isEdit, setIsEdit] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
   const [isShowDetails, setIsShowDetails] = useState(false);
